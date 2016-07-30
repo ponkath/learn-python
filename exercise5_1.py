@@ -4,16 +4,20 @@
 the numbers. If the user enters anything other than a number, detect their mistake
 using try and except and print an error message and skip to the next number."""
 
-userint = input('Enter a number: ')
-while userint:
-    if userint == 'done':
-        print ('done')
-        break
-    else:
-        try:
-            u = float(userint)
-            
-        except:
-            print ('bad data')
-print (total,count,avarage)
-
+counter = 0
+total = 0
+average = 0
+userinp = None
+while True:
+    userinp = input('Enter a number: ')
+    try:
+        if userinp == 'done':
+            break
+        number = int(userinp)
+        counter = counter + 1
+        total = total + number
+    except:
+        print ('bad data')
+if counter > 0:
+    average = total / counter
+print (total,counter,average)
