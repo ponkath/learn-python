@@ -6,13 +6,11 @@ number catch it with a try/except and put out an appropriate message and
 ignore the number. Enter the numbers from the book for problem 5.1 and Match
 the desired output as shown"""
 
-#TODO: create function, write tests, backwards compatible/version agnostic
-
 smallest_so_far = None
 largest_so_far = None
 userinp = None
 while True:
-    userinp = input('Enter a number: ')
+    userinp = raw_input('Enter a number: ')
     try:
         if userinp == 'done':
             break
@@ -22,6 +20,6 @@ while True:
         if largest_so_far == None or number > largest_so_far:
             largest_so_far = number
     except:
-        print ('Invalid input')
-print ('Maximum is:',largest_so_far)
-print ('Minimum is:', smallest_so_far)
+        print 'Invalid input'
+print 'Maximum is',largest_so_far
+print 'Minimum is', smallest_so_far
